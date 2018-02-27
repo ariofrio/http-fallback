@@ -1,0 +1,29 @@
+{
+  "name": "http-fallback",
+  "version": "0.1.0",
+  "description": "Run any non-HTTP server on the same port as your HTTP server.",
+  "main": "src/FallbackHttpServer.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ariofrio/http-fallback.git"
+  },
+  "keywords": [
+    "http",
+    "fallback",
+    "server",
+    "port",
+    "proxy"
+  ],
+  "author": "Andres Riofrio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ariofrio/http-fallback/issues"
+  },
+  "homepage": "https://github.com/ariofrio/http-fallback#readme",
+  "devDependencies": {
+    "jest": "^22.4.2"
+  }
+}
