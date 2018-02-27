@@ -40,7 +40,7 @@ server.listen(8000);
 
 ```
 
-Also see [examples/bzfs-proxy.js](https://github.com/ariofrio/http-proxy/blob/master/examples/bzfs-proxy.js).
+Also see [examples/bzfs-proxy.js](https://github.com/ariofrio/http-fallback/blob/master/examples/bzfs-proxy.js).
 
 ## API
 
