@@ -1,6 +1,27 @@
 language: node_js
 node_js:
-- 'node'
-- 'lts/*'
+- node
+- lts/*
 - '9'
 - '8'
+
+env:
+  global:
+    - CC_TEST_REPORTER_ID=fb393d32609f431c11f898b1fc7a4aa36dddf4f8e9a3568d9a367c10b2a499f8
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+script:
+  - bundle exec rspec
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
+deploy:
+  provider: npm
+  email: riofrios@gmail.com
+  api_key:
+    secure: nBqgwSKJTNQYNxboSZnKL5f1dQ2XchG/M3IoTkk34hz20DF99yif6KDLOixSkeYIZvEw/MBKPR8kWxoYSh/6RlCOQpdBylA/PsAqK+Oh1u8YECbf2g0LRnUobS1+ZuYRpu0hzVEtZXlalrUhwdGtlcheU6eH92fxOGXZoixXB7+WISz7DSa8PnIfuNUtkzESJSCUgJvplC6DloJy67ZwILVAtkAknePx4UJ0m5P4PUYO+j0m/X19dSGalzG8fa46ZvswpBV5BJdtZmlVOG+SnHh02zBDRgPO6thvd69u9c+iWibXVbj1Mu5aFb2AO7hoitHcAMNRb8mj6473bfuKf38l/sILUhBG+SSjATKakAZtWXP9awNAFYRsHZPpzMuEM/HFw/8KTe2WiMmfa4og3R7U5t7XeGGs9Gs9ybILqTjRWnanLBNfP1RyMwPxAVxPm8UPcN6njj9BYf5KIWkmvWFWPNEecY/CBxsq7fPSLWr6q/Nj+BNUjJtqmGcjzoNkWA7GmEmPfVU8hiXCXlxKN82CPYYO0Xez2t7yI65B/3aqSShqhTZgjzOx/5OFP1brQpG/6E+e9DyVSiipqDH9bfA1oYdDvfUmLyTgg40A4DNwJ4HQcB8eWMQH1NoJ6gNc7oR4r+9KDW3+0HZGRLwi45soTm1iSsGIQkqYy/hckVI=
+  on:
+    tags: true
+    repo: ariofrio/http-fallback
