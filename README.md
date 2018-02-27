@@ -1,7 +1,7 @@
 # HTTP Fallback
 
-[![Linux Build Status](https://img.shields.io/travis/ariofrio/http-fallback.svg?label=linux+build)](https://travis-ci.org/ariofrio/http-fallback)
-[![Windows Build Status](https://img.shields.io/appveyor/ci/ariofrio/http-fallback.svg?label=windows+build)](https://ci.appveyor.com/project/ariofrio/http-fallback)
+[![Linux Tests Status](https://img.shields.io/travis/ariofrio/http-fallback.svg?label=linux+tests)](https://travis-ci.org/ariofrio/http-fallback)
+[![Windows Tests Status](https://img.shields.io/appveyor/ci/ariofrio/http-fallback.svg?label=windows+tests)](https://ci.appveyor.com/project/ariofrio/http-fallback)
 [![Maintainability](https://img.shields.io/codeclimate/maintainability/ariofrio/http-fallback.svg)](https://codeclimate.com/github/ariofrio/http-fallback/maintainability)
 [![Test Coverage](https://img.shields.io/codeclimate/c/ariofrio/http-fallback.svg)](https://codeclimate.com/github/ariofrio/http-fallback/test_coverage)
 [![NPM version](https://img.shields.io/npm/v/http-fallback.svg)](https://www.npmjs.com/package/http-fallback)
