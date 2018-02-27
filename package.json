@@ -1,7 +1,7 @@
 {
   "name": "http-fallback",
   "version": "0.1.0",
-  "description": "Run any non-HTTP server on the same port as your HTTP server.",
+  "description": "Run any non-HTTP server on the same port as http.Server",
   "main": "src/FallbackHttpServer.js",
   "scripts": {
     "test": "jest"
